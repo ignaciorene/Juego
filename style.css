@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=VT323);
+@console-color: #14fdce;
+@console-bg: #031e11;
+
+body{
+	width: 80%;
+	margin: auto;
+	background-color: rgba(0, 0, 0, 0.9);
+	background: #383838;
+	color: #14fdce;
+	font-family: 'VT323';
+	font-size: 24px;
+	-webkit-font-smoothing: none;
+	line-height: 1.2;
+}
+
+h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+#interior{
+	background-color: rgba(0, 0, 0, 0.9);
+	padding: 300px 200px 300px 200px;
+	display: block;
+}
+
+#borde-exterior{
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding: 50px 50px 100px 50px;
+	background-color: grey;
+	-webkit-box-shadow: 0px 0px 10px 2px #000000; 
+	box-shadow: 0px 0px 10px 2px #000000;
+}
+
+#borde-interior{
+	background-color: transparent;
+  border-radius: 2rem;
+  border: 1rem solid;
+  border-bottom-color: #121212;
+  border-left-color: #080808;
+  border-right-color: #080808;
+  border-top-color: #020202;
+  box-shadow:
+    inset 0 0 18rem black,
+    inset 0 0 3rem black,
+    0 0 10rem black;
+  height: 96%;
+  top: 2%;
+  left: 2%;
+  width: 96%;
+  pointer-events: none;
+}
+
+#on-off{
+	background: rgb(153, 153, 153);
+	border: 1px solid rgb(153, 153, 153);
+	float: right;
+	vertical-align: middle;
+	align-content: center;
+	text-align: center;
+	margin-top: 1.5%;
+	padding: 20px 20px 20px 20px;
+	-webkit-box-shadow: 0px 0px 10px 0px #000000; 
+	box-shadow: 0px 0px 10px 0px #000000;
+}
+
+#on-off:hover{
+	-webkit-box-shadow: 0px 0px 10px 2px #000000; 
+	box-shadow: 0px 0px 10px 2px #000000;
+}
+
+#luz{
+	float: right;
+	vertical-align: middle;
+	align-content: center;
+	text-align: center;
+	margin-top: 3%;
+	border-radius: 50%;
+	padding: 10px 10px 10px 10px;
+	background-color: red;
+	margin-left: 3%;
+	-webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 30px 2px #FF0000; 
+	box-shadow: 0px 10px 13px -7px #000000, 0px 0px 30px 2px #FF0000;
+}
+
+.contenido{
+	display: block;
+  	height: 100%;
+  	left: 0;
+  	top: 0;
+  	width: 100%;
+}
+
+
+.menu-btn{
+	vertical-align: middle;
+	align-content: center;
+	margin-top: 2%;
+	padding: 10px 10px 10px 10px;
+	font-family: 'VT323';
+	font-size: 18px;
+	color: #14fdce;
+	border: 1px solid #14fdce;
+	background-color: #031e11;
+}
+
+@keyframes crt-output {
+  0% { opacity: 0.9; }
+  50% { opacity: 1; }
+}
+
+::-moz-selection {
+  background-color: #14fdce;
+  color: #031e11;
+}
+::selection {
+  background-color: #14fdce;
+  color: #031e11;
