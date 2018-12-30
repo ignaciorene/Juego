@@ -17,6 +17,9 @@ function prendido(){
 		document.getElementById('output').style="display: none";
 		document.getElementById('instrucciones').style="display: none";
 		document.getElementById('dificultad').style="display: none";
+		document.getElementById('juego-titulo').style="display: none";
+		document.getElementById('intentos').style="display: none";
+		document.getElementById('principal').style="display: none";
 
 		encendido=false;
 	}	
