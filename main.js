@@ -15,6 +15,8 @@ function prendido(){
 		luz.style="background: red; -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 30px 2px #FF0000; box-shadow: 0px 10px 13px -7px #000000, 0px 0px 30px 2px #FF0000;";
 		pantalla.style="animation: none;background-color: rgba(0, 0, 0, 0.9)";
 		document.getElementById('output').style="display: none";
+		document.getElementById('instrucciones').style="display: none";
+		document.getElementById('dificultad').style="display: none";
 
 		encendido=false;
 	}
