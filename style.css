@@ -21,6 +21,11 @@ h1 {
   margin: auto;
 }
 
+button:hover{
+	background-color: #14fdce;
+  	color: #031e11;
+}
+
 #interior{
 	background-color: rgba(0, 0, 0, 0.9);
 	height: 100%;
@@ -106,10 +111,31 @@ h1 {
 	margin-top: 2%;
 	padding: 10px 10px 10px 10px;
 	font-family: 'VT323';
-	font-size: 18px;
+	font-size: 35px !important;
 	color: #14fdce;
 	border: 1px solid #14fdce;
 	background-color: #031e11;
+}
+
+#dificultad{
+	display: none;
+}
+
+.dificultad-btn{
+	margin-top: 2%;
+}
+
+#volver-dif{
+	margin-top: 10%; 
+}
+
+#instrucciones{
+	display: none;
+}
+
+.instrucciones-contenido{
+	width: 70%;
+	margin: auto;
 }
 
 @keyframes crt-output {

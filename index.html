@@ -13,16 +13,54 @@
 				<div id="interior">
 					<div id="output">
 						<div id="titulo-menu">
-							<h1>JUEGO</h1>
+							<h1>Juego</h1>
 						</div>
 						<div class="menu">
-							<button type="button" class="menu-btn">Iniciar</button>
+							<button type="button" class="menu-btn" onclick="dificultad()">Iniciar</button>
 						</div>
 						<div class="menu">
-							<button type="button" class="menu-btn">instrucciones</button>
+							<button type="button" class="menu-btn" onclick="instrucciones()">instrucciones</button>
 						</div>
 					</div>
+
+					<div id="dificultad">
+						<div id="titulo-dificultad">
+							<h1>Dificultad</h1>
+						</div>
+						<div class="dificultad-btn">
+							<button type="button" class="menu-btn">Facil</button>
+						</div>
+						<div class="dificultad-btn">
+							<button type="button" class="menu-btn">Normal</button>
+						</div>
+						<div class="dificultad-btn">
+							<button type="button" class="menu-btn">Dificil</button>
+						</div>
+						<div class="dificultad-btn">
+							<button type="button" id="volver-dif" class="menu-btn" onclick="menu()">Volver</button>
+						</div>
+					</div>
+
+					<div id="instrucciones">
+						<div class="instrucciones-titulo">
+							<h1>Instrucciones</h1>
+						</div>
+						<div class="instrucciones-contenido">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+
+						<div class="dificultad-btn">
+							<button type="button" class="menu-btn" onclick="menu()">Volver</button>
+						</div>
+					</div>
+
 				</div>
+
 				<div class="piece.scanlines.noclick"></div>
   				<div class="piece.glow.noclick"></div>
 

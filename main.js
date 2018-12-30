@@ -21,4 +21,20 @@ function prendido(){
 	
 	console.log(encendido);
 	
+};
+
+function dificultad(){
+	document.getElementById('output').style="display: none";
+	document.getElementById('dificultad').style="display: block";
+};
+
+function instrucciones(){
+	document.getElementById('output').style="display: none";
+	document.getElementById('instrucciones').style="display: block";
+};
+
+function menu(){
+	document.getElementById('output').style="display: block";
+	document.getElementById('instrucciones').style="display: none";
+	document.getElementById('dificultad').style="display: none";
 }
