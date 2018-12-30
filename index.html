@@ -13,7 +13,7 @@
 				<div id="interior">
 					<div id="output">
 						<div id="titulo-menu">
-							<h1>Juego</h1>
+							<h1>Unlock the Cake</h1>
 						</div>
 						<div class="menu">
 							<button type="button" class="menu-btn" onclick="dificultad()">Iniciar</button>
@@ -66,10 +66,10 @@
 						</div>
 						<div id="intentos">
 							<h3>Intentos restantes: </h3>
-							<div class="intentos-box" id="intento-4"></div>
-							<div class="intentos-box" id="intento-3"></div>
+							<div class="intentos-box" id="intento-1"></div>
 							<div class="intentos-box" id="intento-2"></div>
-							<div class="intentos-box" id="intento-1"></div>	
+							<div class="intentos-box" id="intento-3"></div>
+							<div class="intentos-box" id="intento-4"></div>	
 						</div>
 						<div id="principal">
 							<div id="principal-opciones">
@@ -77,32 +77,32 @@
 									<div class="codigo">
 										<div class="linea">
 											<ul>
-												<li><p class="codigo-aleatorio">1</p></li>
-												<li><button type="button" class="opciones">Opciones</button></li>
+												<li><p class="codigo-aleatorio">01:</p></li>
+												<li><button type="button" id="opcion1" onclick="opcionelegida(0)">Opcion 1</button></li>
 											</ul>													
 										</div>
 										<div class="linea">
 											<ul>
-												<li><p class="codigo-aleatorio">2</p></li>
-												<li><button type="button" class="opciones">Opciones</button></li>
+												<li><p class="codigo-aleatorio">02:</p></li>
+												<li><button type="button" id="opcion2" onclick="opcionelegida(1)">Opcion 2</button></li>
 											</ul>													
 										</div>
 										<div class="linea">
 											<ul>
-												<li><p class="codigo-aleatorio">3</p></li>
-												<li><button type="button" class="opciones">Opciones</button></li>
+												<li><p class="codigo-aleatorio">03:</p></li>
+												<li><button type="button" id="opcion3" onclick="opcionelegida(2)">Opcion 3</button></li>
 											</ul>													
 										</div>
 										<div class="linea">
 											<ul>
-												<li><p class="codigo-aleatorio">4</p></li>
-												<li><button type="button" class="opciones">Opciones</button></li>
+												<li><p class="codigo-aleatorio">04:</p></li>
+												<li><button type="button" id="opcion4" onclick="opcionelegida(3)">Opcion 4</button></li>
 											</ul>													
 										</div>
 										<div class="linea">
 											<ul>
-												<li><p class="codigo-aleatorio">5</p></li>
-												<li><button type="button" class="opciones">Opciones</button></li>
+												<li><p class="codigo-aleatorio">05:</p></li>
+												<li><button type="button" id="opcion5" onclick="opcionelegida(4)">Opcion 5</button></li>
 											</ul>													
 										</div>										
 									</div>
@@ -110,65 +110,65 @@
 									<div class="codigo">
 										<div class="linea">
 											<ul>
-												<li><p class="codigo-aleatorio">11</p></li>
-												<li><button type="button" class="opciones">Opciones</button></li>
+												<li><p class="codigo-aleatorio">06:</p></li>
+												<li><button type="button" id="opcion6" onclick="opcionelegida(5)">Opcion 6</button></li>
 											</ul>													
 										</div>
 										<div class="linea">
 											<ul>
-												<li><p class="codigo-aleatorio">12</p></li>
-												<li><button type="button" class="opciones">Opciones</button></li>
+												<li><p class="codigo-aleatorio">07:</p></li>
+												<li><button type="button" id="opcion7" onclick="opcionelegida(6)">Opcion 7</button></li>
 											</ul>													
 										</div>
 										<div class="linea">
 											<ul>
-												<li><p class="codigo-aleatorio">13</p></li>
-												<li><button type="button" class="opciones">Opciones</button></li>
+												<li><p class="codigo-aleatorio">08:</p></li>
+												<li><button type="button" id="opcion8" onclick="opcionelegida(7)">Opcion 8</button></li>
 											</ul>													
 										</div>
 										<div class="linea">
 											<ul>
-												<li><p class="codigo-aleatorio">14</p></li>
-												<li><button type="button" class="opciones">Opciones</button></li>
+												<li><p class="codigo-aleatorio">09:</p></li>
+												<li><button type="button" id="opcion9" onclick="opcionelegida(8)">Opcion 9</button></li>
 											</ul>													
 										</div>
 										<div class="linea">
 											<ul>
-												<li><p class="codigo-aleatorio">15</p></li>
-												<li><button type="button" class="opciones">Opciones</button></li>
+												<li><p class="codigo-aleatorio">10:</p></li>
+												<li><button type="button" id="opcion10" onclick="opcionelegida(9)">Opcion 10</button></li>
 											</ul>													
-										</div> 
+										</div>										
 									</div>
 
 									<div class="codigo">
 										<div class="linea">
 											<ul>
-												<li><p class="codigo-aleatorio">16</p></li>
-												<li><button type="button" class="opciones">Opciones</button></li>
+												<li><p class="codigo-aleatorio">11:</p></li>
+												<li><button type="button" id="opcion11" onclick="opcionelegida(10)">Opcion 11</button></li>
 											</ul>													
 										</div>
 										<div class="linea">
 											<ul>
-												<li><p class="codigo-aleatorio">17</p></li>
-												<li><button type="button" class="opciones">Opciones</button></li>
+												<li><p class="codigo-aleatorio">12:</p></li>
+												<li><button type="button" id="opcion12" onclick="opcionelegida(11)">Opcion 12</button></li>
 											</ul>													
 										</div>
 										<div class="linea">
 											<ul>
-												<li><p class="codigo-aleatorio">18</p></li>
-												<li><button type="button" class="opciones">Opciones</button></li>
+												<li><p class="codigo-aleatorio">13:</p></li>
+												<li><button type="button" id="opcion13" onclick="opcionelegida(12)">Opcion 13</button></li>
 											</ul>													
 										</div>
 										<div class="linea">
 											<ul>
-												<li><p class="codigo-aleatorio">19</p></li>
-												<li><button type="button" class="opciones">Opciones</button></li>
+												<li><p class="codigo-aleatorio">14:</p></li>
+												<li><button type="button" id="opcion14" onclick="opcionelegida(13)">Opcion 14</button></li>
 											</ul>													
 										</div>
 										<div class="linea">
 											<ul>
-												<li><p class="codigo-aleatorio">20</p></li>
-												<li><button type="button" class="opciones">Opciones</button></li>
+												<li><p class="codigo-aleatorio">15:</p></li>
+												<li><button type="button" id="opcion15" onclick="opcionelegida(14)">Opcion 15</button></li>
 											</ul>													
 										</div> 
 									</div>									
@@ -177,36 +177,30 @@
 								<div id="historial">
 									<div class="linea">
 										<ul>
-											<li><p> > </p></li>
 											<li><p id="respuesta-1">Respuesta</p></li>
-											<li><p>_</p></li>
 										</ul>													
 									</div> 
 
 									<div class="linea">
 										<ul>
-											<li><p>  </p></li>
 											<li><p id="respuesta-2">Respuesta</p></li>
 										</ul>													
 									</div> 
 
 									<div class="linea">
 										<ul>
-											<li><p>  </p></li>
 											<li><p id="respuesta-3">Respuesta</p></li>
 										</ul>													
 									</div> 
 
 									<div class="linea">
 										<ul>
-											<li><p>  </p></li>
 											<li><p id="respuesta-4">Respuesta</p></li>
 										</ul>													
 									</div> 
 
 									<div class="linea">
 										<ul>
-											<li><p>  </p></li>
 											<li><p id="respuesta-5">Respuesta</p></li>
 										</ul>													
 									</div> 
