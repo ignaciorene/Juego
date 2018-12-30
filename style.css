@@ -156,21 +156,16 @@ ul{
   color: #031e11;
 }
 
-
-.juego{
+#juego-titulo{
 	display: none;
 }
 
-.juego-titulo{
-	display: none;
-}
-
-.intentos{
+#intentos{
 	display: none; /*inline*/
 	width: 100%;
 }
 
-.intentos h3{
+#intentos h3{
 	float: left;
 	margin: auto;
 }
@@ -265,7 +260,7 @@ ul{
 	background-color: #031e11;
 }
 
-#btn-principal button:hover, #principal button{
+#btn-principal button:hover, #principal button:hover{
 	background-color: #14fdce;
   	color: #031e11;
 }
