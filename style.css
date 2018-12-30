@@ -26,6 +26,10 @@ button:hover{
   	color: #031e11;
 }
 
+ul{
+	list-style: none;
+}
+
 #interior{
 	background-color: rgba(0, 0, 0, 0.9);
 	height: 100%;
@@ -150,4 +154,118 @@ button:hover{
 ::selection {
   background-color: #14fdce;
   color: #031e11;
+}
+
+
+.juego{
+	display: none;
+}
+
+.juego-titulo{
+	display: none;
+}
+
+.intentos{
+	display: none; /*inline*/
+	width: 100%;
+}
+
+.intentos h3{
+	float: left;
+	margin: auto;
+}
+
+.intentos-box{
+	float: left;
+	background-color: #14fdce;
+	padding: 20px 2px 20px 2px;
+	width: 3%;
+	margin-left: 3%;
+}
+
+#principal{
+	width: 100%;
+	overflow: hidden;
+	display: none; /*flex*/
+  	flex-direction: column;
+  	text-align: left;
+}
+
+#principal button{
+	vertical-align: middle;
+	align-content: center;
+	margin-top: 2%;
+	padding: 10px 10px 10px 10px;
+	font-family: 'VT323';
+	font-size: 24px !important;
+	color: #14fdce;
+	border: 1px solid #14fdce;
+	background-color: #031e11;
+}
+
+#principal-opciones{
+	width: 100%;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.principal-box{
+	display: block;
+}
+
+.codigo{
+	margin-top: 2%;
+	display: inline;
+	width: 20%;
+	float: left;
+}
+
+.linea{
+	margin: 0;
+	padding: 0;
+}
+
+.linea ul{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.linea ul li{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+#historial{
+	margin-top: 3%;
+	margin-left: 3%;
+	width: 30%;
+	display: inline;
+	float: right;
+}
+
+#btn-principal{
+	width: 100%;
+  	flex-direction: column;
+  	text-align: center;
+  	margin: auto;
+}
+
+#btn-principal button{
+	vertical-align: middle;
+	align-content: center;
+	margin-top: 2%;
+	padding: 10px 10px 10px 10px;
+	font-family: 'VT323';
+	font-size: 35px !important;
+	color: #14fdce;
+	border: 1px solid #14fdce;
+	background-color: #031e11;
+}
+
+#btn-principal button:hover, #principal button{
+	background-color: #14fdce;
+  	color: #031e11;
 }

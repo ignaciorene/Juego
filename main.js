@@ -19,10 +19,7 @@ function prendido(){
 		document.getElementById('dificultad').style="display: none";
 
 		encendido=false;
-	}
-	
-	console.log(encendido);
-	
+	}	
 };
 
 function dificultad(){
@@ -39,4 +36,19 @@ function menu(){
 	document.getElementById('output').style="display: block";
 	document.getElementById('instrucciones').style="display: none";
 	document.getElementById('dificultad').style="display: none";
-}
+	document.getElementById('juego').style="display: none";
+	document.getElementsByClassName('juego-titulo').style="display: none";
+	document.getElementsByClassName('intentos').style="display: none";
+	document.getElementById('principal').style="display: none";
+};
+
+function juego(){
+	document.getElementById('output').style="display: none";
+	document.getElementById('instrucciones').style="display: none";
+	document.getElementById('dificultad').style="display: none";
+
+	document.getElementById('juego').style="display: inline";
+	document.getElementsByClassName('juego-titulo').style="display: inline";
+	document.getElementsByClassName('intentos').style="display: inline";
+	document.getElementById('principal').style="display: flex";
+};
