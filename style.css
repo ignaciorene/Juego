@@ -264,3 +264,21 @@ ul{
 	background-color: #14fdce;
   	color: #031e11;
 }
+
+#logo-ganar{
+	color: #14fdce; 
+	font-size: 200px;
+}
+
+#cuadro-ganar{
+	display: none;
+}
+
+#logo-perder{
+	color: #14fdce; 
+	font-size: 200px;
+}
+
+#cuadro-perder{
+	display: none;
+}

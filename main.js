@@ -28,6 +28,8 @@ function prendido(){	//funcion del boton ON/OFF
 		document.getElementById('juego-titulo').style="display: none";
 		document.getElementById('intentos').style="display: none";
 		document.getElementById('principal').style="display: none";
+		document.getElementById('cuadro-ganar').style="display: none";
+		document.getElementById('cuadro-perder').style="display: none";
 
 		encendido=false;
 	}	
@@ -55,6 +57,8 @@ function menu(){	//vuelve al menu principal
 	document.getElementById('respuesta-3').style="display: none";
 	document.getElementById('respuesta-4').style="display: none";
 	document.getElementById('respuesta-5').style="display: none";
+	document.getElementById('cuadro-ganar').style="display: none";
+	document.getElementById('cuadro-perder').style="display: none";
 };
 
 function juego(){	//inicia juego
@@ -70,14 +74,19 @@ function juego(){	//inicia juego
 	document.getElementById('respuesta-3').innerHTML="";
 	document.getElementById('respuesta-4').innerHTML="";
 	document.getElementById('respuesta-5').innerHTML="";
-	document.getElementById('intento-1').style="display:inline-block";
-	document.getElementById('intento-2').style="display:inline-block";
-	document.getElementById('intento-3').style="display:inline-block";
-	document.getElementById('intento-4').style="display:inline-block";
+	document.getElementById('respuesta-1').style="display:inline";
+	document.getElementById('respuesta-2').style="display:inline";
+	document.getElementById('respuesta-3').style="display:inline";
+	document.getElementById('respuesta-4').style="display:inline";
+	document.getElementById('respuesta-5').style="display:inline";
+	document.getElementById('intento-1').style="display:inline";
+	document.getElementById('intento-2').style="display:inline";
+	document.getElementById('intento-3').style="display:inline";
+	document.getElementById('intento-4').style="display:inline";
 
 	
 	ganar=false;
-	opcionganadora=Math.floor((Math.random() * 15) + 1);	//elijo la respuesta correcta aleatoriamente
+	opcionganadora=Math.floor((Math.random() * 14) + 1);	//elijo la respuesta correcta aleatoriamente
 	contador=0;
 	cont=0;
 	opciones=[];
@@ -159,7 +168,8 @@ function opcionelegida(num){	//accion al elegir una opcion, num es el numero de 
 	if (num==opcionganadora) {	//si elegi la opcion correcta
 		ganar=true;
 		console.log("ganastes");
-		menu();
+		ganarTorta();
+		console.log(document.getElementById('respuesta-1').innerHTML);
 	}
 
 	for(var i=0;i<palabra_elegida.length;i++){	//reviso cuantas letras coinciden
@@ -200,20 +210,45 @@ function opcionelegida(num){	//accion al elegir una opcion, num es el numero de 
 				document.getElementById('intento-4').style="display:none";
 				document.getElementById('respuesta-4').innerHTML=opciones[num]+" tiene "+cont+"/5 letras correctas";
 				document.getElementById('respuesta-5').innerHTML=">_";
-				contador=0;
-				opciones=[];
-				menu();
+				perderTorta();
 				console.log("perdistes");
+				console.log(document.getElementById('respuesta-1').innerHTML);
 			}
 			else{	//si se me acabo los intentos y gane
 				document.getElementById('intento-4').style="display:none";
 				document.getElementById('respuesta-5').innerHTML=opciones[num]+" tiene "+cont+"/5 letras correctas";
 				console.log("ganastes");	
-				contador=0;
-				menu();
+				ganarTorta();
+				console.log(document.getElementById('respuesta-1').innerHTML);
 			}
 			break;			
 	}
 	console.log(contador);
 
+}
+
+function ganarTorta(){	//si ganas
+	document.getElementById('cuadro-ganar').style="display: block";
+
+	document.getElementById('juego-titulo').style="display: none";
+	document.getElementById('intentos').style="display: none";
+	document.getElementById('principal').style="display: none";
+	document.getElementById('respuesta-1').style="display: none";
+	document.getElementById('respuesta-2').style="display: none";
+	document.getElementById('respuesta-3').style="display: none";
+	document.getElementById('respuesta-4').style="display: none";
+	document.getElementById('respuesta-5').style="display: none";
+}
+
+function perderTorta(){	//si perdes
+	document.getElementById('cuadro-perder').style="display: block";
+
+	document.getElementById('juego-titulo').style="display: none";
+	document.getElementById('intentos').style="display: none";
+	document.getElementById('principal').style="display: none";
+	document.getElementById('respuesta-1').style="display: none";
+	document.getElementById('respuesta-2').style="display: none";
+	document.getElementById('respuesta-3').style="display: none";
+	document.getElementById('respuesta-4').style="display: none";
+	document.getElementById('respuesta-5').style="display: none";
 }
