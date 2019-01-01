@@ -77,7 +77,7 @@ function juego(){	//inicia juego
 
 	
 	ganar=false;
-	opcionganadora=Math.floor((Math.random() * 15) + 1);	//elijo la respuesta correcta aleatoriamente
+	opcionganadora=Math.floor((Math.random() * 14) + 1);	//elijo la respuesta correcta aleatoriamente
 	contador=0;
 	cont=0;
 	opciones=[];
