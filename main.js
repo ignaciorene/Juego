@@ -1,4 +1,12 @@
-var array=["perro","comer","paseo","viaje","besar","tener","temer","adios","reino","asado","nacho","tomas","bella","bello","linda"]; //biblioteca con las opciones
+
+//biblioteca con las opciones
+var arrayFacil=["DUDE","DUDA","DUCO","DUDO","DUGO","ECHO","ECHE","ECUA","ECUO","EDEN","ESER","ESOS","ESES","FAÑO","FABA","FAJE","FAJA","ERRA","EROS","ELLE","ELLA","ELFO","ELLO","DIJE","DIME","CUYO","CUYE","CUTA","CUSO","CUSI","CUTE","CUTI","CUYA","HAYO","HAYA","HEÑI","HEDE","HELA","HEDI","GURA","GULA","GOZO","HILO","HOLA","HOME","BAÑE","BAÑA","BABA","BABI","BAGA","BADA","BACA","AZUT","AZUR","AZOR","BOJE","BOJO","BOLI","BOLA","ÑAÑA"];
+var arrayNormal=["Jubile","Iguana","Jugaba","Agonía","Agosto","Pintar","Obispo","Multar","Copete","Anillo","Omitir","Asalto","Arruga","Octavo","Azteca","Quedar","Innato","Azúcar","Cabaña","Caviar","Apelar","Chisme","Cuarzo","Cúpula","Ocular","Ínfima","Indico","Grabar","Poster","Exigir","Ingles","Asesor","Cáncer","Imitar","Vestir","Hundir","Formar","Sobrio","Gestar","Juzgar","Ataque","Forzar","Fingir","Sultán","Sirena","Vulgar","Cárcel","Apoyar","Servir","Carril"];
+var arrayDificil=["ablandar","aborigen","abreviar","acarrear","acogedor","bailarín","baluarte","baratija","barbacoa","bebedizo","cabestro","cafetera","calcular","califato","callejón","dactilar","decisión","degradar","degustar","delgadez","empalmar","emplazar","encantar","fabricar","fabuloso","fanático","fandango","herético","holgazán","homónimo","hospital","humildad","ilustrar","imaginar","imprenta","langosta","lanzador","lastimar","licencia","liquidez","luchador","magnolia","maletero","mamífero","maniobra","medieval","ondulado","opositor","original","orquídea","pabellón","palomita","paraguas","pasajero","pastoril","repuesto","reservar","revolcar","rupestre","sacudida","seductor","segmento","sencillo","sensible","tornillo","torrente","traducir","travesía","vainilla","variedad","ventisca","vocativo"];
+var array=[]; 
+
+
+
 
 var encendido=false;
 var contador=0;
@@ -6,7 +14,7 @@ var opciones=[];
 var ganar=false;
 var opcionganadora=0;
 var cont=0;
-
+var dificultadElegida="";
 
 function prendido(){	//funcion del boton ON/OFF
 	var pantalla=document.getElementById('interior');
@@ -61,7 +69,7 @@ function menu(){	//vuelve al menu principal
 	document.getElementById('cuadro-perder').style="display: none";
 };
 
-function juego(){	//inicia juego
+function juego(num){	//inicia juego
 	document.getElementById('output').style="display: none";
 	document.getElementById('instrucciones').style="display: none";
 	document.getElementById('dificultad').style="display: none";
@@ -84,12 +92,35 @@ function juego(){	//inicia juego
 	document.getElementById('intento-3').style="display:inline";
 	document.getElementById('intento-4').style="display:inline";
 
-	
+	dificultadElegida=num;
+
 	ganar=false;
 	opcionganadora=Math.floor((Math.random() * 14) + 1);	//elijo la respuesta correcta aleatoriamente
 	contador=0;
 	cont=0;
 	opciones=[];
+
+	switch (dificultadElegida){	//le doy a array las palabras de acuerdo a la dificultad elegida
+
+		case 1:
+			for(var t=0;t<arrayFacil.length;t++){
+				array=arrayFacil.slice(0,arrayFacil.length-1);
+			}
+			break;
+
+		case 2:
+			for(var t=0;t<arrayNormal.length;t++){
+				array=arrayNormal.slice(0,arrayNormal.length-1);
+			}
+			break;
+
+		case 3:
+			for(var t=0;t<arrayDificil.length;t++){
+				array=arrayDificil.slice(0,arrayDificil.length-1);
+			}
+			break;
+	}
+	
 
 	//desordeno la lista para q cada vez q se juege sea random las opciones
 	for(var i=1;i<array.length;i++){
@@ -105,7 +136,6 @@ function juego(){	//inicia juego
 	}
 
 	opciones=array.slice(0,15); //tomo 15 valores y los muestro en pantalla
-	console.log(opciones);
 
 	for(var i=0;i<15;i++){
 
@@ -160,16 +190,13 @@ function juego(){	//inicia juego
 };
 
 function opcionelegida(num){	//accion al elegir una opcion, num es el numero de la posicion
-	console.log(num);
-	console.log(opciones[num]);
+
 	var palabra_elegida=opciones[num].slice(0,opciones[num].length);	//hago un array donde cada letra de la palabra es un valor para compararla despues
 	var palabra_correcta=opciones[opcionganadora].slice(0,opciones[opcionganadora].length);
 
 	if (num==opcionganadora) {	//si elegi la opcion correcta
 		ganar=true;
-		console.log("ganastes");
 		ganarTorta();
-		console.log(document.getElementById('respuesta-1').innerHTML);
 	}
 
 	for(var i=0;i<palabra_elegida.length;i++){	//reviso cuantas letras coinciden
@@ -183,8 +210,6 @@ function opcionelegida(num){	//accion al elegir una opcion, num es el numero de 
 	if (cont>5) {	//para evitar confundir cuando aparecen varias veces la mismas letras
 		cont=5;
 	}
-
-	console.log("coinciden "+cont);
 
 	switch(contador){	//intentos
 		case 0:
@@ -211,19 +236,14 @@ function opcionelegida(num){	//accion al elegir una opcion, num es el numero de 
 				document.getElementById('respuesta-4').innerHTML=opciones[num]+" tiene "+cont+"/5 letras correctas";
 				document.getElementById('respuesta-5').innerHTML=">_";
 				perderTorta();
-				console.log("perdistes");
-				console.log(document.getElementById('respuesta-1').innerHTML);
 			}
 			else{	//si se me acabo los intentos y gane
 				document.getElementById('intento-4').style="display:none";
-				document.getElementById('respuesta-5').innerHTML=opciones[num]+" tiene "+cont+"/5 letras correctas";
-				console.log("ganastes");	
+				document.getElementById('respuesta-5').innerHTML=opciones[num]+" tiene "+cont+"/5 letras correctas";	
 				ganarTorta();
-				console.log(document.getElementById('respuesta-1').innerHTML);
 			}
 			break;			
 	}
-	console.log(contador);
 
 }
 
