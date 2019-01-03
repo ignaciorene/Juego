@@ -284,3 +284,71 @@ ul{
 #cuadro-perder{
 	display: none;
 }
+
+@media only screen and (max-width: 1200px){ 
+	body{ 
+		width: 100%; 
+		margin: 0; 
+		padding: 0; 
+		font-size: 24px; 
+	} 
+ 
+	button{ 
+		font-size: 3rem; 
+		padding: 2px 2px 2px 2px !important; 
+		margin: 0; 
+	} 
+ 
+	#borde-exterior{ 
+		margin: 0; 
+		margin-top: 15%; 
+		padding: 25px 5px 100px 5px !important; 
+	} 
+ 
+	#on-off{ 
+		padding: 10px 10px 10px 10px !important; 
+	} 
+ 
+	#luz{ 
+		margin-left: 2%; 
+		margin-right: 2%; 
+	} 
+ 
+	.intentos-box{ 
+		padding: 12px 2px 8px 2px; 
+	} 
+ 
+	#juego-titulo h1{ 
+		font-size: 4rem !important; 
+		margin-bottom: 1%; 
+	} 
+ 
+	#historial{ 
+		margin-top: 4%; 
+		width: 22%; 
+		margin-right: 0; 
+		float: right; 
+		font-size: 1rem !important; 
+	} 
+ 
+	#historial ul{ 
+		margin-top: 1%; 
+	} 
+ 
+	.codigo{ 
+		width: 25%; 
+	} 
+ 
+	.codigo ul{ 
+	} 
+ 
+	#btn-principal button{ 
+		padding: 2px 2px 2px 2px !important; 
+		font-size: 2rem; 
+	} 
+ 
+	#interior{ 
+		height: 1000px; 
+	} 
+} 
+/**/
