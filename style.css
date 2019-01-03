@@ -295,7 +295,6 @@ ul{
  
 	button{ 
 		font-size: 3rem; 
-		padding: 2px 2px 2px 2px !important; 
 		margin: 0; 
 	} 
  
@@ -315,7 +314,6 @@ ul{
 	} 
  
 	.intentos-box{ 
-		padding: 12px 2px 8px 2px; 
 	} 
  
 	#juego-titulo h1{ 
@@ -343,7 +341,6 @@ ul{
 	} 
  
 	#btn-principal button{ 
-		padding: 2px 2px 2px 2px !important; 
 		font-size: 2rem; 
 	} 
  
