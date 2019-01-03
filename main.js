@@ -200,7 +200,7 @@ function juego(num){	//inicia juego
 };
 
 function opcionelegida(num){	//accion al elegir una opcion, num es el numero de la posicion
-
+	cont=0;
 	sonidoclick();
 
 	var palabra_elegida=opciones[num].slice(0,opciones[num].length);	//hago un array donde cada letra de la palabra es un valor para compararla despues
