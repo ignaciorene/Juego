@@ -196,7 +196,7 @@ function juego(num){	//inicia juego
 		}
 	}
 
-	document.getElementById('respuesta').innerHTML= opcionganadora + " " + opciones[opcionganadora];
+	console.log(" la opcion ganadora es " +(opcionganadora + 1 )+ " " + opciones[opcionganadora]); 
 };
 
 function opcionelegida(num){	//accion al elegir una opcion, num es el numero de la posicion
