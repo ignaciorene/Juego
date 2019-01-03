@@ -17,6 +17,8 @@ var cont=0;
 var dificultadElegida="";
 
 function prendido(){	//funcion del boton ON/OFF
+	sonidoOn();
+
 	var pantalla=document.getElementById('interior');
 	var luz=document.getElementById('luz');
 
@@ -44,16 +46,22 @@ function prendido(){	//funcion del boton ON/OFF
 };
 
 function dificultad(){	//abre botones de dificultad
+	sonidoclick();
+
 	document.getElementById('output').style="display: none";
 	document.getElementById('dificultad').style="display: block";
 };
 
 function instrucciones(){ //abre instrucciones
+	sonidoclick();
+
 	document.getElementById('output').style="display: none";
 	document.getElementById('instrucciones').style="display: block";
 };
 
 function menu(){	//vuelve al menu principal
+	sonidoclick();
+
 	document.getElementById('output').style="display: block";
 	document.getElementById('instrucciones').style="display: none";
 	document.getElementById('dificultad').style="display: none";
@@ -70,6 +78,8 @@ function menu(){	//vuelve al menu principal
 };
 
 function juego(num){	//inicia juego
+	sonidoclick();
+
 	document.getElementById('output').style="display: none";
 	document.getElementById('instrucciones').style="display: none";
 	document.getElementById('dificultad').style="display: none";
@@ -191,6 +201,8 @@ function juego(num){	//inicia juego
 
 function opcionelegida(num){	//accion al elegir una opcion, num es el numero de la posicion
 
+	sonidoclick();
+
 	var palabra_elegida=opciones[num].slice(0,opciones[num].length);	//hago un array donde cada letra de la palabra es un valor para compararla despues
 	var palabra_correcta=opciones[opcionganadora].slice(0,opciones[opcionganadora].length);
 
@@ -248,6 +260,8 @@ function opcionelegida(num){	//accion al elegir una opcion, num es el numero de 
 }
 
 function ganarTorta(){	//si ganas
+	sonidoWin();
+
 	document.getElementById('cuadro-ganar').style="display: block";
 
 	document.getElementById('juego-titulo').style="display: none";
@@ -261,6 +275,8 @@ function ganarTorta(){	//si ganas
 }
 
 function perderTorta(){	//si perdes
+	sonidolose();
+	
 	document.getElementById('cuadro-perder').style="display: block";
 
 	document.getElementById('juego-titulo').style="display: none";
@@ -271,4 +287,28 @@ function perderTorta(){	//si perdes
 	document.getElementById('respuesta-3').style="display: none";
 	document.getElementById('respuesta-4').style="display: none";
 	document.getElementById('respuesta-5').style="display: none";
+}
+
+function sonidoclick(){
+	var audio = new Audio('sound/click.mp3');
+
+	audio.play();
+}
+
+function sonidoOn(){
+	var audio = new Audio('sound/on.mp3');
+
+	audio.play();
+}
+
+function sonidoWin(){
+	var audio = new Audio('sound/win.mp3');
+
+	audio.play();
+}
+
+function sonidolose(){
+	var audio = new Audio('sound/lose.mp3');
+
+	audio.play();
 }
